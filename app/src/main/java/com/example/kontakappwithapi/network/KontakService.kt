@@ -1,6 +1,7 @@
 package com.example.kontakappwithapi.network
 
 import com.example.kontakappwithapi.model.Kontak
+import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
@@ -26,5 +27,5 @@ interface KontakService {
     suspend fun updateKontak(@Path("id") id: Int, @Body kontak: Kontak)
 
     @DELETE("kontak/{id}")
-    suspend fun deleteKontak(@Path("id") id: Int)
+    suspend fun deleteKontak(@Path("id") id: Int): Call<Kontak>
 }
