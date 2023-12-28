@@ -11,4 +11,6 @@ class NetworkKontakRepository(
     private val kontakApiService: KontakService
 ) : KontakRepository{
     override suspend fun getKontak(): List<Kontak> = kontakApiService.getKontak()
+
+
 }
