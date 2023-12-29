@@ -2,7 +2,6 @@ package com.example.kontakappwithapi.repository
 
 import com.example.kontakappwithapi.model.Kontak
 import com.example.kontakappwithapi.network.KontakService
-import retrofit2.Response
 import java.io.IOException
 
 interface KontakRepository {
