@@ -8,6 +8,7 @@ import kotlinx.serialization.Serializable
 data class Kontak(
     val id: Int,
     val nama: String,
+    @SerialName(value = "email")
     val alamat: String,
 //    Penggunaan SerialName untuk mengatasi perbedaan nama yang ada di database
 //    dengan yang ada di model yang kita bikin
