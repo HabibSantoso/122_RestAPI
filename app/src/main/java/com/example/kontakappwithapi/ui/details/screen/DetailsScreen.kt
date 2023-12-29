@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
 
 package com.example.kontakappwithapi.ui.details.screen
 
@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -62,7 +63,11 @@ fun DetailsScreen(
                 )
         }
     ) {innerPadding ->
-
+        DetailStatus(
+            kontakUiState = detailsViewModel.detailsKontakUiState,
+            retryAtion = { detailsViewModel.getKontakById() },
+            onEditClick = onEditClick,
+            modifier = Modifier.padding(innerPadding).fillMaxSize())
     }
 
 }
